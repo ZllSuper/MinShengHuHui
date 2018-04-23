@@ -1,0 +1,317 @@
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="zepto.min.js"></script>
+<script src="my.js"></script>
+<title>民生通惠-会议</title>
+</head>
+<body>
+    <section class="main-cont meeting-cont">
+        <div class="main-top">
+            <div class="left">
+                <div id="MeetRoomName" class="meet-name">会议室</div>
+                <div class="meet-time"><i class="time-icon"></i><span id="currenttime">2018-4-3 15:30</span></div>
+            </div>
+            <div class="right"><i class="more-icon"></i></div>
+        </div>
+        <div class="main-bottom">
+            <table class="meet-list">
+                <tr>
+                    <td rowspan="6" class="time-bg1">
+                        <div class="time-flag"><span>上午</span> 09:00</div>
+                        <div class="time-flag"><span>上午</span> 09:30</div>
+                        <div class="time-flag"><span>上午</span> 10:00</div>
+                        <div class="time-flag"><span>上午</span> 10:30</div>
+                        <div class="time-flag"><span>上午</span> 11:00</div>
+                        <div class="time-flag"><span>上午</span> 11:30</div>
+                    </td>
+                    <td id="t0900"></td>
+                </tr>
+                <tr>
+                    <td id="t0930"></td>
+                </tr>
+                <tr>
+                    <td id="t1000"></td>
+                </tr>
+                <tr>
+                    <td id="t1030"></td>
+                </tr>
+                <tr>
+                    <td id="t1100"></td>
+                </tr>
+                <tr>
+                    <td id="t1130"></td>
+                </tr>
+                <tr class="line-hr"><td colspan="2"></td></tr><tr>
+                    <td rowspan="10" class="time-bg1 time-bg2">
+                        <div class="time-flag"><span>下午</span> 12:00</div>
+                        <div class="time-flag"><span>下午</span> 12:30</div>
+                        <div class="time-flag"><span>下午</span> 13:00</div>
+                        <div class="time-flag"><span>下午</span> 13:30</div>
+                        <div class="time-flag"><span>下午</span> 14:00</div>
+                        <div class="time-flag"><span>下午</span> 14:30</div>
+                        <div class="time-flag"><span>下午</span> 15:00</div>
+                        <div class="time-flag"><span>下午</span> 15:30</div>
+                        <div class="time-flag"><span>下午</span> 16:00</div>
+                        <div class="time-flag"><span>下午</span> 16:30</div>
+                    </td>
+                    <td id="t1200"></td>
+                </tr>
+                <tr>
+                    <td id="t1230"></td>
+                </tr>
+                <tr>
+                    <td id="t1300"></td>
+                </tr>
+                <tr>
+                    <td id="t1330"></td>
+                </tr>
+                <tr>
+                    <td id="t1400"></td>
+                </tr>
+                <tr>
+                    <td id="t1430"></td>
+                </tr>
+                <tr>
+                    <td id="t1500"></td>
+                </tr>
+                <tr>
+                    <td id="t1530"></td>
+                </tr>
+                <tr>
+                    <td id="t1600"></td>
+                </tr>
+                <tr>
+                    <td id="t1630"></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <div class="dialog-wrap setting-dialog">
+        <div class="dialog-cont">
+            <div class="title">会议室设置</div>
+            <div class="dialog-conts">
+                <div class="select-cont" id="meetlist">
+                    <div class="select-inner active"><span>a会议室</span></div>
+                    <div class="select-inner"><span>b会议室</span></div>
+                    <div class="select-inner"><span>c会议室</span></div>
+                </div>
+            </div>
+            <div class="dialog-bottom">
+                <div class="left sure-btn">确认</div>
+                <div class="right cancle-btn">取消</div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog-wrap meet-detail-dialog">
+        <div class="dialog-cont">
+            <div class="title">会议详情<i class="dialog-close-icon"></i></div>
+            <div class="dialog-conts">
+                <div class="meet-details">
+                    <table class="meet-table">
+                        <tr>
+                            <td><i class="zt-icon"></i>主题</td>
+                            <td id="zhuti">营销会议</td>
+                        </tr>
+                        <tr>
+                            <td><i class="time-icon"></i>时间</td>
+                            <td id="shijian">10:00-12:00</td>
+                        </tr>
+                        <tr>
+                            <td><i class="pp-icon"></i>参加人员</td>
+                            <td id="canhui"></td>
+                        </tr>
+                        <tr>
+                            <td><i class="zhr-icon"></i>知会人</td>
+                            <td id="zhihui"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+$(function(){
+    $('.sure-btn,.cancle-btn,.dialog-close-icon').click(function(){
+        $(this).parents('.dialog-wrap').hide();
+    });
+    $('.select-cont .select-inner').click(function(){
+        $('.select-cont .select-inner').removeClass("active");
+        $(this).addClass("active");
+    });
+    $('.meet-block').click(function(){
+        $('.meet-detail-dialog').show();
+    });
+    $('.more-icon').click(function(){
+        $('.setting-dialog').show();
+    });
+})
+
+
+    function onClickMeet(createId, startData, endData)
+    {
+        // alert(createId+":" + startData + ":" + endData);
+        $.post("http://www.yunlvsoft.com", "CPEC.Apps.Calendar.Service.ScheduleService.GetScheduleList{accountID:\"4596c427-d4d2-4fc8-be43-fccbccd16d0d\",\"startDate\":\""+startData+"\",\"endDate\":\""+endData+"\",\"userIDs\":[\""+createId+"\"],isViewOtherAccount:\"false\",\"exceptProcSchedule\":\"true\"}", function(data) {
+            // alert(data);
+            var obj = eval('(' + data + ')');
+            for(var retcount = 0; retcount < obj['ReturnObject'].length; retcount++){
+                if(obj['ReturnObject'][retcount]['Place'] == $("#MeetRoomName").text()){
+                    // alert($("#MeetRoomName").text());
+                    $("#zhuti").text(obj['ReturnObject'][retcount]['Title']);
+                    $("#shijian").text(startData.substr(11, 5) + "-" + endData.substr(11,5));
+                    var canhui = "";
+                    for(var peopleCount = 0; peopleCount < obj['ReturnObject'][retcount]['JoinNames'].length; peopleCount++){
+                        if (peopleCount == 0) {
+                            canhui += obj['ReturnObject'][retcount]['JoinNames'][peopleCount];
+                        }else{
+                            canhui += "&nbsp;&nbsp;" + obj['ReturnObject'][retcount]['JoinNames'][peopleCount];
+                        }
+                    }
+                    $("#canhui").text(canhui);
+
+                    var zhihui = "";
+                    if (obj['ReturnObject'][retcount]['NotifyNames'] != null) {
+                        for(var zhihuiCount = 0; zhihuiCount < obj['ReturnObject'][retcount]['NotifyNames'].length; zhihuiCount++){
+                            if (zhihuiCount == 0) {
+                                zhihui += obj['ReturnObject'][retcount]['NotifyNames'][zhihuiCount];
+                            }else{
+                                zhihui += "&nbsp;&nbsp;" + obj['ReturnObject'][retcount]['NotifyNames'][zhihuiCount];
+                            }
+                        }
+
+                        $("#zhihui").text(zhihui);
+                    }
+
+                    $('.meet-detail-dialog').show();
+                    break;
+
+                }
+            }
+
+            
+
+
+        });
+    }
+
+
+    var selectMeetRoom = 3;
+    function getRoomList()
+    {
+        $.post("http://www.yunlvsoft.com", "CPEC.Apps.Calendar.Service.MettingRoomService.GetAllMettingRoomPage{\"accountID\":\"4596c427-d4d2-4fc8-be43-fccbccd16d0d\",\"pageSize\":\"100\",\"pageIndex\":\"1\"}", function(data) {
+            var obj = eval('(' + data + ')');
+            console.log(data);
+            if (obj['Total'] != 0) {
+                $id = obj['ReturnObject'][selectMeetRoom]['ID'];
+                $("#MeetRoomName").text(obj['ReturnObject'][selectMeetRoom]['Name']);
+                $("#currenttime").text(getNowFormatDate(0));
+
+                $("#meetlist").empty();
+                for(var count = 0; count < obj['ReturnObject'].length; count++){
+                    if (selectMeetRoom == count) {
+                       $("#meetlist").append("<div class=\"select-inner active\"><span>" + obj['ReturnObject'][count]['Name'] + "</span></div>"); 
+                   }else{
+                        $("#meetlist").append("<div class=\"select-inner\"><span>" + obj['ReturnObject'][count]['Name'] + "</span></div>");
+                   }
+
+                }
+
+
+
+
+                $id = obj['ReturnObject'][selectMeetRoom]['ID'];
+                $postdata = "CPEC.Apps.Calendar.Service.MettingRoomService.GetUseMettingRoomByIDAndDate{accountID:\"4596c427-d4d2-4fc8-be43-fccbccd16d0d\",\"mettingRoomID\":\""+ $id +"\",\"mettingStartDate\":\""+ getNowFormatDate(0) +" 00:00:00\",\"mettingEndDate\":\""+ getNowFormatDate(1) +" 00:00:00\"}";
+                console.log($postdata);
+                $.post("http://www.yunlvsoft.com", $postdata, function(data){
+                    console.log(data);
+                    var retObj = eval('(' + data + ')');
+                    for(var i = 0; i < retObj['ReturnObject'].length; i++){
+                        for(var meetcount = 0; meetcount < retObj['ReturnObject'].length; meetcount++){
+
+                            var starts = retObj['ReturnObject'][meetcount]['StartTime'].split(":");
+                            var ends = retObj['ReturnObject'][meetcount]['EndTime'].split(":");
+                            var firstday = getFirstDay(0);
+                            var meetday = retObj['ReturnObject'][meetcount]['MettingDay'];
+                            var diff = DateDiff(firstday, meetday) + 1;
+                            var divheight = (parseInt(ends[0]) * 100 + parseInt(ends[1])) - (parseInt(starts[0]) * 100 + parseInt(starts[1]));
+                            var startData = retObj['ReturnObject'][meetcount]['MettingDay'] + " " + retObj['ReturnObject'][meetcount]['StartTime'] + ":00";
+                            var endData = retObj['ReturnObject'][meetcount]['MettingDay'] + " " + retObj['ReturnObject'][meetcount]['EndTime'] + ":00";
+                            var createrId =  retObj['ReturnObject'][meetcount]['CreaterID'];
+                            $("#t" + starts[0] + starts[1]).empty().append("<div class=\"meet-block\" ><div class=\"meet-inner\" style=\"height:"+ divheight +"px;\" onclick=\"onClickMeet('"+createrId+"', '"+startData+"', '"+ endData +"')\"><div class=\"meet-text\">商务<br>会议</div></div></div>");
+
+
+                        }
+
+                        break;
+                    }
+                });
+
+                $('.sure-btn').unbind('click');
+                $('.sure-btn').click(function(){
+                    $(this).parents('.dialog-wrap').hide();
+                    $(".select-cont .select-inner").each(function(){
+                        if ($(this).hasClass('active')) {
+                            selectMeetRoom = $(".select-cont .select-inner").index(this);
+                            $(".content").empty();
+                            getRoomList();
+                        }
+                        
+                    });
+                });
+                $('.select-cont .select-inner').unbind('click');
+                $('.select-cont .select-inner').click(function(){
+                    $('.select-cont .select-inner').removeClass("active");
+                    $(this).addClass("active");
+                });
+            }
+        });
+    }
+
+    getRoomList();
+    function getNowFormatDate(offsetDay) {
+        var date = new Date();
+        var seperator1 = "-";
+        var year = date.getFullYear();
+        var month = date.getMonth();  // back
+        var strDate = date.getDate() + offsetDay;
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        var currentdate = year + seperator1 + month + seperator1 + strDate;
+        return currentdate;
+    }
+
+    function getFirstDay(offsetDay){
+        var now = new Date(); 
+        var nowTime = now.getTime() ; 
+        var day = now.getDay();
+        var oneDayLong = 24*60*60*1000 ; 
+        var MondayTime = nowTime - (day-offsetDay)*oneDayLong  ; 
+        var monday = new Date(MondayTime);
+        var day = monday.getDate();
+        var month = monday.getMonth();  // back
+        return monday.getFullYear() + "-" + month + "-" + day;
+    }
+
+    //计算天数差的函数，通用  
+    function  DateDiff(sDate1,  sDate2){    //sDate1和sDate2是2002-12-18格式  
+        var  aDate,  oDate1,  oDate2,  iDays  
+        aDate  =  sDate1.split("-")  
+        oDate1  =  new  Date(aDate[1]  +  '-'  +  aDate[2]  +  '-'  +  aDate[0])    //转换为12-18-2002格式  
+        aDate  =  sDate2.split("-")  
+        oDate2  =  new  Date(aDate[1]  +  '-'  +  aDate[2]  +  '-'  +  aDate[0])  
+        iDays  =  parseInt(Math.abs(oDate1  -  oDate2)  /  1000  /  60  /  60  /24)    //把相差的毫秒数转换为天数  
+        return  iDays  
+    }
+
+
+
+</script>
+</body>
+</html>

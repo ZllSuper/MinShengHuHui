@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6567AEB0208E173300FABBE5 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 6567AE99208E173200FABBE5 /* index.html */; };
+		6567AEB1208E173300FABBE5 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 6567AE9B208E173200FABBE5 /* style.css */; };
+		6567AEB2208E173300FABBE5 /* more_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567AE9D208E173200FABBE5 /* more_icon.png */; };
+		6567AEB3208E173300FABBE5 /* time_bg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567AE9E208E173200FABBE5 /* time_bg2.png */; };
+		6567AEB4208E173300FABBE5 /* index_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567AE9F208E173200FABBE5 /* index_bg.png */; };
+		6567AEB5208E173300FABBE5 /* time_bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEA0208E173200FABBE5 /* time_bg1.png */; };
+		6567AEB6208E173300FABBE5 /* selected_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEA1208E173200FABBE5 /* selected_icon.png */; };
+		6567AEB7208E173300FABBE5 /* pp_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEA2208E173200FABBE5 /* pp_icon.png */; };
+		6567AEB8208E173300FABBE5 /* time_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEA3208E173200FABBE5 /* time_icon1.png */; };
+		6567AEB9208E173300FABBE5 /* zhr_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEA4208E173200FABBE5 /* zhr_icon.png */; };
+		6567AEBA208E173300FABBE5 /* meet_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEA5208E173200FABBE5 /* meet_bg.png */; };
+		6567AEBB208E173300FABBE5 /* time_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEA6208E173200FABBE5 /* time_icon.png */; };
+		6567AEBC208E173300FABBE5 /* booking_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEA7208E173200FABBE5 /* booking_icon.png */; };
+		6567AEBD208E173300FABBE5 /* close_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEA8208E173200FABBE5 /* close_icon.png */; };
+		6567AEBE208E173300FABBE5 /* zt_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEA9208E173200FABBE5 /* zt_icon.png */; };
+		6567AEBF208E173300FABBE5 /* select_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEAA208E173200FABBE5 /* select_icon.png */; };
+		6567AEC0208E173300FABBE5 /* my.js in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEAC208E173200FABBE5 /* my.js */; };
+		6567AEC1208E173300FABBE5 /* zepto.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEAD208E173200FABBE5 /* zepto.min.js */; };
+		6567AEC2208E173300FABBE5 /* weekMeet.html in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEAE208E173200FABBE5 /* weekMeet.html */; };
+		6567AEC3208E173300FABBE5 /* meet.html in Resources */ = {isa = PBXBuildFile; fileRef = 6567AEAF208E173200FABBE5 /* meet.html */; };
 		65B9C66D208DCC610083FEF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B9C66C208DCC610083FEF7 /* AppDelegate.m */; };
 		65B9C670208DCC610083FEF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B9C66F208DCC610083FEF7 /* ViewController.m */; };
 		65B9C673208DCC610083FEF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B9C671208DCC610083FEF7 /* Main.storyboard */; };
@@ -36,6 +56,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6567AE66208E07A600FABBE5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6567AE67208E094E00FABBE5 /* APSystemDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APSystemDefine.h; sourceTree = "<group>"; };
+		6567AE99208E173200FABBE5 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		6567AE9B208E173200FABBE5 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		6567AE9D208E173200FABBE5 /* more_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more_icon.png; sourceTree = "<group>"; };
+		6567AE9E208E173200FABBE5 /* time_bg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time_bg2.png; sourceTree = "<group>"; };
+		6567AE9F208E173200FABBE5 /* index_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = index_bg.png; sourceTree = "<group>"; };
+		6567AEA0208E173200FABBE5 /* time_bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time_bg1.png; sourceTree = "<group>"; };
+		6567AEA1208E173200FABBE5 /* selected_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected_icon.png; sourceTree = "<group>"; };
+		6567AEA2208E173200FABBE5 /* pp_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pp_icon.png; sourceTree = "<group>"; };
+		6567AEA3208E173200FABBE5 /* time_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time_icon1.png; sourceTree = "<group>"; };
+		6567AEA4208E173200FABBE5 /* zhr_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhr_icon.png; sourceTree = "<group>"; };
+		6567AEA5208E173200FABBE5 /* meet_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meet_bg.png; sourceTree = "<group>"; };
+		6567AEA6208E173200FABBE5 /* time_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time_icon.png; sourceTree = "<group>"; };
+		6567AEA7208E173200FABBE5 /* booking_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = booking_icon.png; sourceTree = "<group>"; };
+		6567AEA8208E173200FABBE5 /* close_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_icon.png; sourceTree = "<group>"; };
+		6567AEA9208E173200FABBE5 /* zt_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zt_icon.png; sourceTree = "<group>"; };
+		6567AEAA208E173200FABBE5 /* select_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_icon.png; sourceTree = "<group>"; };
+		6567AEAC208E173200FABBE5 /* my.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = my.js; sourceTree = "<group>"; };
+		6567AEAD208E173200FABBE5 /* zepto.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = zepto.min.js; sourceTree = "<group>"; };
+		6567AEAE208E173200FABBE5 /* weekMeet.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = weekMeet.html; sourceTree = "<group>"; };
+		6567AEAF208E173200FABBE5 /* meet.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = meet.html; sourceTree = "<group>"; };
 		65B9C668208DCC610083FEF7 /* MinShengHuHui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinShengHuHui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B9C66B208DCC610083FEF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65B9C66C208DCC610083FEF7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,6 +133,57 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6567AE98208E173200FABBE5 /* H5 */ = {
+			isa = PBXGroup;
+			children = (
+				6567AE99208E173200FABBE5 /* index.html */,
+				6567AE9A208E173200FABBE5 /* css */,
+				6567AE9C208E173200FABBE5 /* images */,
+				6567AEAB208E173200FABBE5 /* js */,
+				6567AEAE208E173200FABBE5 /* weekMeet.html */,
+				6567AEAF208E173200FABBE5 /* meet.html */,
+			);
+			path = H5;
+			sourceTree = "<group>";
+		};
+		6567AE9A208E173200FABBE5 /* css */ = {
+			isa = PBXGroup;
+			children = (
+				6567AE9B208E173200FABBE5 /* style.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		6567AE9C208E173200FABBE5 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				6567AE9D208E173200FABBE5 /* more_icon.png */,
+				6567AE9E208E173200FABBE5 /* time_bg2.png */,
+				6567AE9F208E173200FABBE5 /* index_bg.png */,
+				6567AEA0208E173200FABBE5 /* time_bg1.png */,
+				6567AEA1208E173200FABBE5 /* selected_icon.png */,
+				6567AEA2208E173200FABBE5 /* pp_icon.png */,
+				6567AEA3208E173200FABBE5 /* time_icon1.png */,
+				6567AEA4208E173200FABBE5 /* zhr_icon.png */,
+				6567AEA5208E173200FABBE5 /* meet_bg.png */,
+				6567AEA6208E173200FABBE5 /* time_icon.png */,
+				6567AEA7208E173200FABBE5 /* booking_icon.png */,
+				6567AEA8208E173200FABBE5 /* close_icon.png */,
+				6567AEA9208E173200FABBE5 /* zt_icon.png */,
+				6567AEAA208E173200FABBE5 /* select_icon.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		6567AEAB208E173200FABBE5 /* js */ = {
+			isa = PBXGroup;
+			children = (
+				6567AEAC208E173200FABBE5 /* my.js */,
+				6567AEAD208E173200FABBE5 /* zepto.min.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
 		65B9C65F208DCC610083FEF7 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +209,8 @@
 		65B9C66A208DCC610083FEF7 /* MinShengHuHui */ = {
 			isa = PBXGroup;
 			children = (
+				6567AE98208E173200FABBE5 /* H5 */,
+				6567AE67208E094E00FABBE5 /* APSystemDefine.h */,
 				65B9C66B208DCC610083FEF7 /* AppDelegate.h */,
 				65B9C66C208DCC610083FEF7 /* AppDelegate.m */,
 				65B9C66E208DCC610083FEF7 /* ViewController.h */,
@@ -125,6 +220,7 @@
 				65B9C676208DCC620083FEF7 /* LaunchScreen.storyboard */,
 				65B9C679208DCC620083FEF7 /* Info.plist */,
 				65B9C67A208DCC620083FEF7 /* main.m */,
+				6567AE66208E07A600FABBE5 /* PrefixHeader.pch */,
 			);
 			path = MinShengHuHui;
 			sourceTree = "<group>";
@@ -261,9 +357,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6567AEBE208E173300FABBE5 /* zt_icon.png in Resources */,
 				65B9C678208DCC620083FEF7 /* LaunchScreen.storyboard in Resources */,
+				6567AEBA208E173300FABBE5 /* meet_bg.png in Resources */,
+				6567AEB8208E173300FABBE5 /* time_icon1.png in Resources */,
+				6567AEB0208E173300FABBE5 /* index.html in Resources */,
+				6567AEBC208E173300FABBE5 /* booking_icon.png in Resources */,
+				6567AEB5208E173300FABBE5 /* time_bg1.png in Resources */,
+				6567AEBD208E173300FABBE5 /* close_icon.png in Resources */,
+				6567AEB6208E173300FABBE5 /* selected_icon.png in Resources */,
+				6567AEC2208E173300FABBE5 /* weekMeet.html in Resources */,
+				6567AEB1208E173300FABBE5 /* style.css in Resources */,
+				6567AEBF208E173300FABBE5 /* select_icon.png in Resources */,
+				6567AEB2208E173300FABBE5 /* more_icon.png in Resources */,
 				65B9C675208DCC620083FEF7 /* Assets.xcassets in Resources */,
+				6567AEBB208E173300FABBE5 /* time_icon.png in Resources */,
+				6567AEC0208E173300FABBE5 /* my.js in Resources */,
+				6567AEB9208E173300FABBE5 /* zhr_icon.png in Resources */,
+				6567AEB7208E173300FABBE5 /* pp_icon.png in Resources */,
 				65B9C673208DCC610083FEF7 /* Main.storyboard in Resources */,
+				6567AEC1208E173300FABBE5 /* zepto.min.js in Resources */,
+				6567AEB3208E173300FABBE5 /* time_bg2.png in Resources */,
+				6567AEC3208E173300FABBE5 /* meet.html in Resources */,
+				6567AEB4208E173300FABBE5 /* index_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,8 +617,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U898CSUEV8;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MinShengHuHui/PrefixHeader.pch";
 				INFOPLIST_FILE = MinShengHuHui/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.meta-insight.MinShengHuHui";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -516,8 +636,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U898CSUEV8;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MinShengHuHui/PrefixHeader.pch";
 				INFOPLIST_FILE = MinShengHuHui/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.meta-insight.MinShengHuHui";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -531,7 +655,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U898CSUEV8;
 				INFOPLIST_FILE = MinShengHuHuiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.meta-insight.MinShengHuHuiTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -546,7 +674,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U898CSUEV8;
 				INFOPLIST_FILE = MinShengHuHuiTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.meta-insight.MinShengHuHuiTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -560,7 +692,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U898CSUEV8;
 				INFOPLIST_FILE = MinShengHuHuiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.meta-insight.MinShengHuHuiUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -574,7 +710,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U898CSUEV8;
 				INFOPLIST_FILE = MinShengHuHuiUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.meta-insight.MinShengHuHuiUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

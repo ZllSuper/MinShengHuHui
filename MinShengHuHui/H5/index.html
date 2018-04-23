@@ -1,0 +1,81 @@
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="zepto.min.js"></script>
+<script src="my.js"></script>
+<title>民生通惠-会议系统首页</title>
+</head>
+<body>
+    <section class="main-cont index-cont" style="height: 100vh;">
+    	<div class="t1">当前会议</div>
+        <div id="currentMeet" class="t2">暂无会议</div>
+        <div id="meettime" class="t3">00:00 - 00:00</div>
+        <div class="t4"><i class="yd-icon"></i>预订人: <span id="createname"></span></div>
+    </section>
+<script>
+    // var winH = $(window).height();
+    // $(window).bind("load resize",function(){
+    //     $('.index-cont').height(winH);
+    // });
+    // 
+    // 
+    $.post("http://www.yunlvsoft.com", "CPEC.Apps.Calendar.Service.MettingRoomService.GetAllMettingRoomPage{\"accountID\":\"4596c427-d4d2-4fc8-be43-fccbccd16d0d\",\"pageSize\":\"10\",\"pageIndex\":\"1\"}", function(data) {
+        var obj = eval('(' + data + ')');
+        console.log(data);
+        if (obj['Total'] != 0) {
+            var selectMeetRoom = 3;
+            $id = obj['ReturnObject'][selectMeetRoom]['ID'];
+            $("#currentMeet").text(obj['ReturnObject'][selectMeetRoom]['Name']);
+
+            $postdata = "CPEC.Apps.Calendar.Service.MettingRoomService.GetUseMettingRoomByIDAndDate{accountID:\"4596c427-d4d2-4fc8-be43-fccbccd16d0d\",\"mettingRoomID\":\""+ $id +"\",\"mettingStartDate\":\""+ getNowFormatDate(-20) +" 00:00:00\",\"mettingEndDate\":\""+ getNowFormatDate(0) +" 00:00:00\"}";
+            console.log($postdata);
+            $.post("http://www.yunlvsoft.com", $postdata, function(data){
+                console.log(data);
+                var retObj = eval('(' + data + ')');
+                for(var i = 0; i < retObj['ReturnObject'].length; i++){
+                    console.log("createName:" + retObj['ReturnObject'][i]['CreaterName']);
+                    console.log("startTime:" + retObj['ReturnObject'][i]['StartTime']);
+                    console.log("endTime:" + retObj['ReturnObject'][i]['EndTime']);
+                    var starts = retObj['ReturnObject'][i]['StartTime'].split(":");
+                    var ends = retObj['ReturnObject'][i]['EndTime'].split(":");
+                    console.log(starts[0] + ":" + ends[0]);
+
+                    var d = new Date();
+                    console.log("currentHour:" + d.getHours() + " currentMin:" + d.getMinutes());
+                    var currentHour = 15; //d.getHours();
+                    var currentMin = 40; //d.getMinutes();
+                    if (currentHour < starts[0]) {continue};
+                    if (currentHour == starts[0] && currentMin < starts[1]) {continue};
+                    if (currentHour > ends[0]) {continue};
+                    if (currentHour == ends[0] && currentMin > ends[1]) {continue};
+
+                    // $("#currentMeet").text(retObj['ReturnObject'][i]['CreaterName']);
+                    $("#createname").text(retObj['ReturnObject'][i]['CreaterName']);
+                    $("#meettime").text(retObj['ReturnObject'][i]['StartTime'] + " - " + retObj['ReturnObject'][i]['EndTime']);
+                    break;
+                }
+            });
+        }
+    });
+
+    function getNowFormatDate(offsetDay) {
+        var date = new Date();
+        var seperator1 = "-";
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate() + offsetDay;
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        var currentdate = year + seperator1 + month + seperator1 + strDate;
+        return currentdate;
+    }
+</script>
+</body>
+</html>
